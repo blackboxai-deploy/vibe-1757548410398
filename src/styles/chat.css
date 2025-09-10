@@ -1,0 +1,55 @@
+/* Chat Container Smooth Scrolling */
+.chat-container {
+  scroll-behavior: smooth;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.chat-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chat-container::-webkit-scrollbar-track {
+  background: rgba(30, 58, 138, 0.1);
+  border-radius: 3px;
+}
+
+.chat-container::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.5);
+  border-radius: 3px;
+}
+
+.chat-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(59, 130, 246, 0.8);
+}
+
+/* Message Animation */
+.message-enter {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: messageSlideIn 0.3s ease-out forwards;
+}
+
+@keyframes messageSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Typing Indicator Animation */
+.typing-indicator {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Smooth Scroll Behavior */
+.smooth-scroll {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(59, 130, 246, 0.5) rgba(30, 58, 138, 0.1);
+}
